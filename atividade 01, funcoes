@@ -1,1 +1,16 @@
+#include <stdio.h>
 
+int soma_naturais(int n) 
+{
+    return (n * (n + 1)) / 2;
+}
+
+int main() 
+{
+  int n = 20;
+  int resultado = soma_naturais(n);
+    
+    printf("A soma dos %d numeros naturais sao: %d\n", n, resultado);
+    
+    return 0;
+}
