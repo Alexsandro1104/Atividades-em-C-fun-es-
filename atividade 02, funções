@@ -1,0 +1,41 @@
+#include <stdio.h>
+
+
+int quantidade_raizes(double a, double b, double c) 
+{
+    double delta = (b * b) - (4 * a * c);
+    
+    if (delta > 0) 
+    {
+        return 2;
+    } else if (delta == 0) 
+    {
+        return 1;
+    } else {
+        return 0;
+    }
+}
+
+int main() 
+{
+    double a, b, c;
+
+    printf("Digite os coeficientes a, b e c: ");
+    if (scanf("%lf %lf %lf", &a, &b, &c) != 3) 
+    {
+        printf("Erro ao ler os coeficientes.\n");
+        return 1;
+    }
+
+    if (a == 0) 
+    {
+        printf("O coeficiente 'a' nao pode zerar na equacao do 2° grau.\n");
+        return 1;
+    }
+
+
+    int resultado = quantidade_raizes(a, b, c);
+    printf("O polinomio possui %d raiz(es) real(is).\n", resultado);
+
+    return 0;
+}
